@@ -1,0 +1,9 @@
+/* global */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+img, object, video, embed {
+	max-width: 100%;
+}
