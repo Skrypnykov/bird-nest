@@ -1,4 +1,27 @@
+$(document).ready(function(){
+    const slider = $("#slider").owlCarousel({
+        loop:true,
+        margin:10,
+        items:4,
+        nav:false,
+        dots:true,
+        loop:true,
+        autoplay:true,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:false
+            },
+            600:{
+                items:3,
+                nav:false
+            }
+        }
+    });
+});
 
+// Map 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2tyeXBueWtvdiIsImEiOiJja2ZsYTdkbzEwZGdqMnFwc2dyMHBnZTl0In0.XQ6qUunUpxoUThIMrGLbPQ';
 var map = new mapboxgl.Map({
     container: 'map',

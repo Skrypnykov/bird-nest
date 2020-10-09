@@ -24,8 +24,6 @@ img, object, video, embed {
 }
 .header {
     position: absolute;
-    -top: 0;
-    -left: 0;
     z-index: 100;
     width: 100%;
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
@@ -52,7 +50,6 @@ img, object, video, embed {
     text-align: center;
 }
 .logo-title-highlight {
-    -font-family: Montserrat;
 	font-size: 28px;
 	font-weight: 500;
     text-transform: none;
@@ -95,10 +92,19 @@ img, object, video, embed {
     height: 100vh;
 }
 
-/* section register */
-.register {
+/* section gallery */
+.gallery {
     height: 500px;
     background-color: #C0C0C0;
+}
+.gallery-title {
+    font-family: Montserrat;
+    font-size: 28px;
+    color:  #5a6164;
+	font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 50px 0 30px;
 }
 
 /* section footer*/
