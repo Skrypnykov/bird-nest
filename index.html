@@ -10,34 +10,74 @@
 	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    
 	<title>Bird's-nest monitoring</title>
 </head>
 <body>
-    <header class="header">
-        <div class="content-container">
-            <div class="header-logo-wrapper">
-                <div class="logo-wrapper">
-                    <img class="logo" src="img/2-sm.png" alt="logo">
-                </div>
-                <h1 class="logo-title">Сервіс моніторингу та зібрання даних <br><span class="logo-title-highlight">щодо пташиних гнізд на лінії електропередачі</span></h1>
-            </div>
-        </div>
-        <div class="header-nav-wrapper">
+    <section class="global">
+        <header class="header">
             <div class="content-container">
-                <nav class="header-nav">
-                    <ul class="header-nav-list">
-                        <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-map-marker" aria-hidden="true"></i>Реєстрація платформи</a></li>
-                        <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-bug" aria-hidden="true"></i>Звіти</a></li>
-                        <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-search" aria-hidden="true"></i>Пошук</a></li>
-                        <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i>Зворотний зв'язок</a></li>
-                    </ul>
-                    <ul class="header-nav-list nav-right">
-                        <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
-                    </ul>
-                </nav>
+                <div class="header-logo-wrapper">
+                    <div class="logo-wrapper">
+                        <img class="logo" src="img/2-sm.png" alt="logo">
+                    </div>
+                    <h1 class="logo-title">Сервіс моніторингу та зібрання даних <br><span class="logo-title-highlight">щодо пташиних гнізд на лінії електропередачі</span></h1>
+                </div>
+            </div>
+            <div class="header-nav-wrapper">
+                <div class="content-container">
+                    <nav class="header-nav">
+                        <ul class="header-nav-list">
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-map-marker" aria-hidden="true"></i>Реєстрація платформи</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-bug" aria-hidden="true"></i>Звіти</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-camera-retro" aria-hidden="true"></i>Галерея</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-search" aria-hidden="true"></i>Пошук</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-envelope-o" aria-hidden="true"></i>Зворотний зв'язок</a></li>
+                        </ul>
+                        <ul class="header-nav-list nav-right">
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-registered" aria-hidden="true"></i>Реєстрація</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href=""><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="map-wrapper">           
+            <div id="map"></div>
+        </div>
+    </section>
+    <section class="register">
+        <div class="content-container"></div>
+    </section>
+    <footer class="footer">
+        <div class="content-container">
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li class="footer-nav-item"><a class="footer-nav-link" href="">Реєстрація платформи</a></li>
+                    <li class="footer-nav-item"><a class="footer-nav-link" href="">Звіти</a></li>
+                    <li class="footer-nav-item"><a class="footer-nav-link" href="">Галерея</a></li>
+                    <li class="footer-nav-item"><a class="footer-nav-link" href="">Пошук</a></li>
+                    <li class="footer-nav-item"><a class="footer-nav-link" href="">Зворотний зв'язок</a></li>
+                </ul>
+            </nav>
+            <div class="footer-content-wrapper">
+                <h3 class="footer-content-title">About project</h3>
+                <p class="footer-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo numquam nihil ex eos facere ipsa optio ducimus necessitatibus unde aliquam beatae ullam dolorem distinctio qui, voluptas cupiditate est doloribus odio?</p>
+            </div>
+            <div class="footer-social">
+                <a href="" class="footer-social-link link-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="" class="footer-social-link link-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="" class="footer-social-link link-youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="" class="footer-social-link link-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
             </div>
         </div>
-    </header>
+        <div class="footer-copyright">
+            <a class="footer-copyright-link" href=""><p class="copyright">2020, Все права защищены. Best App</p></a>
+        </div>
+    </footer>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="owlcarousel/owl.carousel.min.js"></script>
