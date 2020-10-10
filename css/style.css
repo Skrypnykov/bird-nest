@@ -89,6 +89,11 @@ img, object, video, embed {
     -moz--transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+.nav-right:not(:first-child).header-nav-item .header-nav-link:hover {
+    background-color: transparent;
+    color: #2F4F4F;
+}
+
 #map {
     height: 100vh;
 }
@@ -98,6 +103,7 @@ img, object, video, embed {
     height: 500px;
     background-color: #C0C0C0;
 }
+.facts-title,
 .gallery-title {
     font-family: Montserrat;
     font-size: 28px;
@@ -106,6 +112,23 @@ img, object, video, embed {
     text-transform: uppercase;
     text-align: center;
     padding: 50px 0 30px;
+}
+
+/* section facts */
+.facts .content-container {
+    margin-bottom: 50px;
+}
+.facts-img {
+    float: right;
+    margin: 0 0 2em 2em;
+}
+.facts-content {
+    font-family: Roboto;
+	font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #5a6164;
 }
 
 /* section footer*/
@@ -119,7 +142,7 @@ img, object, video, embed {
     padding: 50px 0;
 }
 .footer-nav {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .footer-nav-list {
     list-style: none;
@@ -157,9 +180,33 @@ img, object, video, embed {
     text-align: justify;
 }
 
+.footer-sidebar-right {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.footer-form {
+    margin-bottom: 30px;
+}
+.footer-form-title {
+    font-family: Roboto;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.footer-form-input {
+    border: 1px solid #C0C0C0;
+    outline: none;
+    padding: 5px;
+    font-family: Roboto;
+	font-size: 17px;
+    color: #5a6164;
+    width: 250px;
+}
+
+
 .footer-social {
     display: flex;
-    align-items: center;
 }
 .footer-social-link {
     width: 40px;
