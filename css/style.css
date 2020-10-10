@@ -118,15 +118,22 @@ img, object, video, embed {
 .facts .content-container {
     margin-bottom: 50px;
 }
-.facts-img {
+.facts-img-right {
     float: right;
-    margin: 0 0 2em 2em;
+    margin: 5px 0 2em 2em;
 }
+.facts-img-left {
+    float: left;
+    margin: 5px 2em 2em 0;
+}
+.clearfix {
+    overflow: auto;
+  }
 .facts-content {
     font-family: Roboto;
 	font-size: 17px;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: justify;
     color: #5a6164;
 }
@@ -141,9 +148,7 @@ img, object, video, embed {
     justify-content: space-between;
     padding: 50px 0;
 }
-.footer-nav {
-    margin-top: 20px;
-}
+
 .footer-nav-list {
     list-style: none;
 }
@@ -154,7 +159,6 @@ img, object, video, embed {
 	font-family: Roboto;
 	font-size: 17px;
     line-height: 20px;
-    font-weight: 500;
     text-decoration: none;
     color: #5a6164;
     text-transform: uppercase;
@@ -166,7 +170,10 @@ img, object, video, embed {
 .footer-content-wrapper {
     width: 50%;
 }
-.footer-content-title {
+
+.footer-content-title,
+.footer-nav-title,
+.footer-form-title {
     font-family: Roboto;
     font-size: 20px;
     margin-bottom: 15px;
@@ -187,12 +194,6 @@ img, object, video, embed {
 }
 .footer-form {
     margin-bottom: 30px;
-}
-.footer-form-title {
-    font-family: Roboto;
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
 }
 .footer-form-input {
     border: 1px solid #C0C0C0;
