@@ -132,8 +132,8 @@ img, object, video, embed {
 .facts-content {
     font-family: Roboto;
 	font-size: 17px;
-    line-height: 24px;
-    margin-bottom: 12px;
+    line-height: 26px;
+    margin-bottom: 15px;
     text-align: justify;
     color: #5a6164;
 }
