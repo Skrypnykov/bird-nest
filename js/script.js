@@ -1,9 +1,27 @@
+// navbar
+var h_hght = document.getElementById('top-logo').clientHeight;
+var h_mrg = 0;
+                 
+$(function(){
+    var elem = $('#top-nav');
+    var top = $(this).scrollTop();
+    if(top > h_hght){
+        elem.css('top', h_mrg);
+    }           
+    $(window).scroll(function(){
+        top = $(this).scrollTop();
+        if (top+h_mrg < h_hght) {
+            elem.css('top', (h_hght-top));
+        } else {
+            elem.css('top', h_mrg);
+        }
+    });
+});
+
+// owl carousel
 $(document).ready(function(){
     const slider = $("#slider").owlCarousel({
-        loop:true,
         margin:10,
-        items:4,
-        nav:false,
         dots:true,
         loop:true,
         autoplay:true,
@@ -14,6 +32,10 @@ $(document).ready(function(){
                 nav:false
             },
             600:{
+                items:2,
+                nav:false
+            },
+            900:{
                 items:3,
                 nav:false
             }
@@ -21,7 +43,7 @@ $(document).ready(function(){
     });
 });
 
-// Map 
+// === Map === 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2tyeXBueWtvdiIsImEiOiJja2ZsYTdkbzEwZGdqMnFwc2dyMHBnZTl0In0.XQ6qUunUpxoUThIMrGLbPQ';
 var map = new mapboxgl.Map({
     container: 'map',
@@ -30,7 +52,7 @@ var map = new mapboxgl.Map({
     zoom: 5.2,
 });
 
-// mapcontrol
+// Mapcontrol
 var fullscreen = new mapboxgl.FullscreenControl()
 map.addControl(fullscreen, 'bottom-right');
 
@@ -55,7 +77,7 @@ map.on('click', function() {
     }
 });
 
-// markers 
+// Map markers 
 var marker = new mapboxgl.Marker({ color: 'red' })
 .setLngLat([37.55, 47.15])
 .addTo(map);
