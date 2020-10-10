@@ -118,7 +118,9 @@ img, object, video, embed {
     justify-content: space-between;
     padding: 50px 0;
 }
-
+.footer-nav {
+    margin-top: 40px;
+}
 .footer-nav-list {
     list-style: none;
 }
@@ -128,13 +130,18 @@ img, object, video, embed {
 .footer-nav-link {
 	font-family: Roboto;
 	font-size: 17px;
-	line-height: 20px;
+    line-height: 20px;
+    font-weight: 500;
     text-decoration: none;
     color: #5a6164;
+    text-transform: uppercase;
+}
+.footer-nav-link:hover {
+    color: #000;
 }
 
 .footer-content-wrapper {
-    width: 40%;
+    width: 50%;
 }
 .footer-content-title {
     font-family: Roboto;
@@ -146,6 +153,8 @@ img, object, video, embed {
     font-family: Roboto;
 	font-size: 17px;
     line-height: 24px;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 
 .footer-social {
@@ -183,6 +192,9 @@ img, object, video, embed {
 }
 .footer-copyright-link {
 	text-decoration: none;
+}
+.footer-copyright-link:hover .copyright {
+    color: #000;
 }
 .copyright {
 	font-family: HelveticaNeueCyr ;
