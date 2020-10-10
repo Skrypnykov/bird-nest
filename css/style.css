@@ -95,9 +95,7 @@ img, object, video, embed {
 .header-nav-link:hover {
     color:#fff;
     background-color: #2F4F4F;
-    -webkit-transition: all .3s ease-in-out;
-    -moz--transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+  
 }
 .nav-right:not(:first-child).header-nav-item .header-nav-link:hover {
     background-color: transparent;
