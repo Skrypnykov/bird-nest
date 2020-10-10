@@ -133,10 +133,11 @@ img, object, video, embed {
     font-family: Roboto;
 	font-size: 17px;
     line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-align: justify;
     color: #5a6164;
 }
+
 
 /* section footer*/
 .footer {
@@ -194,15 +195,17 @@ img, object, video, embed {
 }
 .footer-form {
     margin-bottom: 30px;
+    width: 100%;
 }
-.footer-form-input {
+
+.footer-input {
     border: 1px solid #C0C0C0;
     outline: none;
     padding: 5px;
     font-family: Roboto;
 	font-size: 17px;
     color: #5a6164;
-    width: 250px;
+    width: 100%;
 }
 
 
