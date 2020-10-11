@@ -120,6 +120,9 @@ img, object, video, embed {
     text-align: center;
     padding: 50px 0 30px;
 }
+.gallery-title {
+    color: rgba(255, 255, 255, 0.9);
+}
 
 /* section facts */
 .facts .content-container {
@@ -333,11 +336,6 @@ img, object, video, embed {
     }
 }
 @media screen and (max-width: 600px){
-    .gallery .content-container,
-    .facts .content-container,
-    .footer .content-container {
-        max-width: 550px;
-    }
     .header-logo-wrapper {
         display: flex;
         flex-direction: column;
@@ -345,10 +343,11 @@ img, object, video, embed {
     .logo-title {
         font-size: 20px;
         line-height: 16px;
-        padding: 15px 0;
+        padding: 5px 0 15px;
     }
     .logo-title-highlight {
-        font-size: 12px;
+        font-size: 15px;
+        line-height: 10px;
     }
 
 	/* nav-toogle */
@@ -401,6 +400,9 @@ img, object, video, embed {
     }
     /* end nav-toogle*/
     
+    .header-nav-wrapper {
+        height: 40px;
+    }
     .header-nav {
         display: flex;
         justify-content: space-between;
@@ -415,7 +417,7 @@ img, object, video, embed {
 		top: 40px;
 		right: -100%;
         width: 100%;
-        padding: 20px 20px 20px 30px;
+        padding: 0;
         text-align: left;
         background: #ededed;
 		transition-duration: .25s;
@@ -425,14 +427,19 @@ img, object, video, embed {
     .header-nav-list:not(:last-child){
         border-right: 1px solid #cecece;
     }
-    .header-nav-wrapper {
-        height: 40px;
+    .header-nav-link {
+        display: inline-block;
+        width: 100%;
     }
-	.header-nav-item {
-        margin-bottom: 10px;
-	}
+    .header-nav-link:hover {
+        background-color: #456b6b;
+    }
     .gallery {
         height: 360px;
+        padding: 0 20px;
+    }
+    .facts {
+        padding: 0 20px;
     }
     .facts-img-left,
     .facts-img-right {
@@ -444,6 +451,9 @@ img, object, video, embed {
     .gallery-title {
         font-size: 18px;
         padding: 40px 0 20px;
+    }
+    .footer {
+        padding: 0 20px;
     }
     .footer .content-container {
         display: flex;
@@ -477,8 +487,8 @@ img, object, video, embed {
     .logo-title {
         font-size: 16px;
     }
-	.header-nav-list {
-        padding: 5px;
+    .logo-title-highlight {
+        font-size: 13px;
     }
     .header-nav-wrapper {
         height: 40px;
@@ -486,9 +496,6 @@ img, object, video, embed {
     .header-nav-link {
         font-size: 10px;
         padding: 10px;
-    }
-	.header-nav-item {
-        margin-bottom: 5px;
     }
     .gallery {
         height: 380px;
