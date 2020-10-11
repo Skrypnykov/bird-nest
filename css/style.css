@@ -309,6 +309,24 @@ img, object, video, embed {
     border: 1px solid #cecece;
     max-width: 100%;
 }
+.form-input-reset {
+    background-color: rgba(255, 215, 0, 1);
+    color: #2F4F4F;
+    padding: 10px 20px ;
+    border: none;
+    outline: none;
+    
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    position: relative;
+    bottom: 16px;
+     
+    cursor: pointer;
+    border-radius: 5px;
+}
 .form-input-submit {
     background-color: rgba(255, 215, 0, 1);
     color: #2F4F4F;
@@ -328,9 +346,9 @@ img, object, video, embed {
     border-radius: 5px;
 }
 .feedback-form-check {
-    display: flex;
+    -display: flex;
     align-items: center;
-    padding: 10px 20px ;
+    padding: 0 20px ;
 }
 .feedback-form-check .form-input {
     margin-top: 0px;
