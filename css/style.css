@@ -20,6 +20,7 @@ img, object, video, embed {
 .global {
     height: 100vh;
     position: relative;
+    background: #F4F6F6;
 }
 .header {
     position: absolute;
@@ -254,6 +255,90 @@ img, object, video, embed {
 	color: #2F4F4F;
 }
 
+/* feedback */
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -height: 100vh;
+    height: 100%;
+}
+.feedback-form-wrapper {
+    border: 3px solid rgba(255, 215, 0, 1);
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+.feedback-title {
+    background-color: rgba(255, 215, 0, 1);
+    padding: 10px 20px;
+    color: #2F4F4F;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form-input-title {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #2F4F4F;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form-input-wrapper {
+    display: flex;
+    padding: 15px 0;
+}
+.form-input {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    padding: 7px;
+    width: 100%;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+}
+.form-message {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #cecece;
+    max-width: 100%;
+}
+.form-input-submit {
+    background-color: rgba(255, 215, 0, 1);
+    color: #2F4F4F;
+    padding: 10px 20px ;
+    border: none;
+    outline: none;
+    
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    position: relative;
+    left: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.feedback-form-check {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px ;
+}
+.feedback-form-check .form-input {
+    margin-top: 0px;
+}
+.feedback-check-img {
+    margin-right: 10px;
+}
+
 /* media request */
 @media screen and (max-width: 1280px){
     .content-container {
@@ -482,9 +567,20 @@ img, object, video, embed {
         justify-content: center;
         align-items: center;
     }
+    .feedback {
+       margin: 0 20px;
+    }
+    .feedback-form-wrapper {
+        margin-top: 120px;
+    }
+  
 }
 @media screen and (max-width: 400px){
+    .logo-wrapper {
+        display: none;
+    }
     .logo-title {
+        padding: 40px 0 20px;
         font-size: 16px;
     }
     .logo-title-highlight {
@@ -519,5 +615,14 @@ img, object, video, embed {
     }
     .copyright {
         font-size: 10px;
+    }
+    .feedback-form-wrapper {
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 100px;
+    }
+    .form-input-wrapper {
+        display: block;
+        padding: 15px 0;
     }
 }
