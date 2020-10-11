@@ -474,11 +474,6 @@ img, object, video, embed {
     }
 }
 @media screen and (max-width: 400px){
-    .gallery .content-container,
-    .facts .content-container,
-    .footer .content-container {
-        max-width: 380px;
-    }
     .logo-title {
         font-size: 16px;
     }
@@ -497,6 +492,13 @@ img, object, video, embed {
     }
     .gallery {
         height: 380px;
+        padding: 0 20px;
+    }
+    .facts {
+        padding: 0 20px;
+    }
+    .footer {
+        padding: 0 20px;
     }
     .footer-sidebar-right {
         flex-direction: column;
