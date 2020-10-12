@@ -26,10 +26,13 @@
         <header class="header">
             <div class="content-container">
                 <div class="header-logo-wrapper" id="top-logo">
+                    <div class="logo-partner-wrapper">
+                        <img src="img/photo.webp" alt="" class="logo-partner">
+                    </div>
                     <div class="logo-wrapper">
                         <img class="logo" src="img/2-sm.png" alt="logo">
+                        <h1 class="logo-title">Сервіс моніторингу та зібрання даних <br><span class="logo-title-highlight">щодо пташиних гнізд на лінії електропередачі</span></h1>
                     </div>
-                    <h1 class="logo-title">Сервіс моніторингу та зібрання даних <br><span class="logo-title-highlight">щодо пташиних гнізд на лінії електропередачі</span></h1>
                 </div>
             </div>
             <div class="header-nav-wrapper" id="top-nav">
@@ -40,11 +43,11 @@
                         <ul class="header-nav-list">
                             <li class="header-nav-item"><a class="header-nav-link" href="pages/platform.html"><i class="fa fa-map-marker" aria-hidden="true"></i>Реєстрація платформи</a></li>
                             <li class="header-nav-item"><a class="header-nav-link" href="pages/reports.html"><i class="fa fa-bug" aria-hidden="true"></i>Звіти</a></li>
-                            <li class="header-nav-item"><a class="header-nav-link" href="pages/feedback.html"><i class="fa fa-envelope-o" aria-hidden="true"></i>Зворотний зв'язок</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="#openFeedback"><i class="fa fa-envelope-o" aria-hidden="true"></i>Зворотний зв'язок</a></li>
                         </ul>
                         <ul class="header-nav-list nav-right">
-                            <li class="header-nav-item"><a class="header-nav-link" href="pages/registration.html"><i class="fa fa-registered" aria-hidden="true"></i>Реєстрація</a></li>
-                            <li class="header-nav-item"><a class="header-nav-link" href="pages/entry.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="#openRegistration"><i class="fa fa-registered" aria-hidden="true"></i>Реєстрація</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="#openEntry"><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
                         </ul>
                     </nav>
                     
@@ -160,7 +163,6 @@
                     <li class="footer-nav-item"><a class="footer-nav-link" href="pages/reports.html">Звіти про роботу</a></li>
                     <li class="footer-nav-item"><a class="footer-nav-link" href="#gallery">Наша галерея</a></li>
                     <li class="footer-nav-item"><a class="footer-nav-link" href="#facts">Цікаві факти</a></li>
-                    <li class="footer-nav-item"><a class="footer-nav-link" href="pages/feedback.html">Зворотний зв'язок</a></li>
                 </ul>
             </nav>
             <div class="footer-sidebar-right">
@@ -181,9 +183,69 @@
         </div>
     </footer>
     
+    <!-- modal windows -->
+    <section class="feedback-modal" id="openFeedback">
+            <a href="#closeFeedback" title="Close" class="close">×</a>
+            <div class="feedback">
+                <div class="feedback-form-wrapper">
+                    <form action="" class="feedback-form">
+                        <h3 class="feedback-title">Форма зворотного зв'язку</h3>
+                        <div class="form-input-wrapper">
+                            <p class="form-input-title">Введіть ваше ім'я<br><input class="form-input" type="text" placeholder="Ваше ім'я"></p>
+                            <p class="form-input-title">Введіть адресу email<br><input class="form-input" type="email" placeholder="Адреса email"></p>
+                        </div>
+                        <p class="form-input-title">Введіть повідомлення<br>
+                        <textarea class="form-message" rows="8" cols="100" name="text" placeholder="Ваше повідомлення"></textarea></p><br>
+                        <div class="form-check">
+                            <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
+                            <input class="form-input" type="text" placeholder="цифра з малюнка">
+                        </div>
+                        <input class="form-input-submit" type="submit" value="Надіслати повідомлення">
+                    </form>
+                </div>
+            </div>
+    </section>
+
+    <section class="entry-modal" id="openEntry">
+            <a href="#closeEntry" title="Close" class="close">×</a>
+            <div class="entry">
+                <div class="entry-form-wrapper">
+                    <form action="" class="entry-form">
+                        <h3 class="entry-title">Увійти</h3>
+                        <p class="form-input-title">Введіть ваше ім'я або Email<br><input class="form-input" type="text" placeholder="Ім'я aбо email"></p>
+                        <p class="form-input-title">Введіть пароль<br><input class="form-input" type="text" placeholder="Пароль"></p>
+                        <div class="form-check">
+                            <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
+                            <input class="form-input" type="text" placeholder="цифра з малюнка">
+                        </div>
+                        <input class="form-input-submit" type="submit" value="Увійти">
+                    </form>
+                </div>
+            </div>
+    </section>
+
+    <section class="registration-modal" id="openRegistration">
+            <a href="#closeRegistration" title="Close" class="close">×</a>
+            <div class="entry">
+                <div class="registration-form-wrapper">
+                    <form action="" class="registration-form">
+                        <h3 class="registration-title">Реєстрація</h3>
+                        <p class="form-input-title">Введіть ваше ім'я або Email<br><input class="form-input" type="text" placeholder="Ім'я aбо email"></p>
+                        <p class="form-input-title">Введіть пароль<br><input class="form-input" type="text" placeholder="Пароль"></p>
+                        <div class="form-check">
+                            <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
+                            <input class="form-input" type="text" placeholder="цифра з малюнка">
+                        </div>
+                        <input class="form-input-submit" type="submit" value="Надіслати">
+                    </form>
+                </div>
+            </div>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

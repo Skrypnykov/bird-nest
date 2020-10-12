@@ -28,13 +28,16 @@ img, object, video, embed {
     width: 100%;
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
 }
-.header-logo-wrapper {
-    display: flex;
-    align-items: center;
+.logo-partner-wrapper {
+    padding: 10px 20px;
+    text-align: right;
+}
+ .logo-partner {
+    max-width: 350px;
 }
 .logo-wrapper {
-    margin-right: 20px;
     display: flex;
+    align-items: center;
 }
 .logo {
     margin: 0;
@@ -48,6 +51,7 @@ img, object, video, embed {
     text-transform: uppercase;
     line-height: 40px;
     text-align: center;
+    -padding-top: 20px;
 }
 .logo-title-highlight {
 	font-size: 28px;
@@ -85,7 +89,7 @@ img, object, video, embed {
 }
 .header-nav-link {
     text-decoration: none;
-    color:#2F4F4F;
+    color: #2F4F4F;
     font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 600;
@@ -255,14 +259,48 @@ img, object, video, embed {
 	color: #2F4F4F;
 }
 
-/* feedback */
-
+/* modal feedback */
+.feedback-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.feedback-modal:target {
+    display: block;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+/* кнопка "Закрыть" */
+.close {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-family: sans-serif;
+    font-size: 48px;
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    text-decoration: none;
+}
+.close:focus, .close:hover {
+    color: #5a6164;
+    cursor: pointer;
+}
+/**/
 .feedback {
     display: flex;
     justify-content: center;
     align-items: center;
-    -height: 100vh;
-    height: 100%;
+    height: 100vh;
+    z-index: 200;
 }
 .feedback-form-wrapper {
     border: 3px solid rgba(255, 215, 0, 1);
@@ -315,15 +353,12 @@ img, object, video, embed {
     padding: 10px 20px ;
     border: none;
     outline: none;
-    
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-
     position: relative;
     bottom: 16px;
-     
     cursor: pointer;
     border-radius: 5px;
 }
@@ -333,31 +368,111 @@ img, object, video, embed {
     padding: 10px 20px ;
     border: none;
     outline: none;
-    
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
-
-    position: relative;
-    left: 20px;
-    margin: 20px 0;
+    margin: 20px;
     cursor: pointer;
     border-radius: 5px;
 }
-.feedback-form-check {
-    -display: flex;
-    align-items: center;
+.form-check {
     padding: 0 20px ;
 }
-.feedback-form-check .form-input {
+.form-check .form-input {
     margin-top: 0px;
 }
-.feedback-check-img {
+.check-img {
     margin-right: 10px;
 }
 
-/* media request */
+/* modal entry */
+.entry-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.entry-modal:target {
+    display: block;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 200;
+}
+.entry-form-wrapper {
+    border: 3px solid rgba(255, 215, 0, 1);
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+.entry-title {
+    background-color: rgba(255, 215, 0, 1);
+    padding: 10px 20px;
+    color: #2F4F4F;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/* modal registration */
+.registration-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+.registration-modal:target {
+    display: block;
+    pointer-events: auto;
+    overflow-y: auto;
+}
+
+.registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 200;
+}
+.registration-form-wrapper {
+    border: 3px solid rgba(255, 215, 0, 1);
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+.registration-title {
+    background-color: rgba(255, 215, 0, 1);
+    padding: 10px 20px;
+    color: #2F4F4F;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+/* media request --------------------------------*/
 @media screen and (max-width: 1280px){
     .content-container {
         max-width: 1200px;
@@ -439,14 +554,24 @@ img, object, video, embed {
     }
 }
 @media screen and (max-width: 600px){
+    .logo-partner-wrapper {
+       padding: 20px 0 0;
+       text-align: center;
+    }
+    .logo-partner {
+        max-width: 300px;
+    }
     .header-logo-wrapper {
         display: flex;
+        flex-direction: column;
+    }
+    .logo-wrapper {
         flex-direction: column;
     }
     .logo-title {
         font-size: 20px;
         line-height: 16px;
-        padding: 5px 0 15px;
+        padding: 10px 0 15px;
     }
     .logo-title-highlight {
         font-size: 15px;
@@ -588,13 +713,16 @@ img, object, video, embed {
     .feedback {
        margin: 0 20px;
     }
-    .feedback-form-wrapper {
-        margin-top: 120px;
+    .entry {
+       margin: 0 20px;
+    }
+    .registration {
+       margin: 0 20px;
     }
   
 }
 @media screen and (max-width: 400px){
-    .logo-wrapper {
+    .logo {
         display: none;
     }
     .logo-title {
@@ -634,10 +762,9 @@ img, object, video, embed {
     .copyright {
         font-size: 10px;
     }
-    .feedback-form-wrapper {
-        align-items: flex-end;
-        justify-content: flex-end;
-        margin-top: 100px;
+    .close {
+        top: 30px;
+        right: 20px;
     }
     .form-input-wrapper {
         display: block;
