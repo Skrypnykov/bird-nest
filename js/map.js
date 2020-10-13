@@ -40,3 +40,7 @@ var marker = new mapboxgl.Marker({ color: 'red' })
 var marker = new mapboxgl.Marker({ color: 'green' })
 .setLngLat([30.51, 50.47])
 .addTo(map);
+
+var marker = new mapboxgl.Marker({ color: 'blue' })
+.setLngLat([37.08, 48.47])
+.addTo(map);
