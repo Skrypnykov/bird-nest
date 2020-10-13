@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,12 +41,13 @@
                         <input id="nav-toggle" type="checkbox">
                         <label class="nav-btn" for="nav-toggle"><span></span></label>
                         <ul class="header-nav-list">
+                            <li class="header-nav-item"><a class="header-nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i>Головна</a></li>
                             <li class="header-nav-item"><a class="header-nav-link" href="pages/platform.html"><i class="fa fa-map-marker" aria-hidden="true"></i>Реєстрація платформи</a></li>
-                            <li class="header-nav-item"><a class="header-nav-link" href="pages/reports.html"><i class="fa fa-bug" aria-hidden="true"></i>Звіти</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="pages/reports.html"><i class="fa fa-twitter" aria-hidden="true"></i>Звіти</a></li>
                             <li class="header-nav-item"><a class="header-nav-link" href="#openFeedback"><i class="fa fa-envelope-o" aria-hidden="true"></i>Зворотний зв'язок</a></li>
                         </ul>
                         <ul class="header-nav-list nav-right">
-                            <li class="header-nav-item"><a class="header-nav-link" href="#openRegistration"><i class="fa fa-registered" aria-hidden="true"></i>Реєстрація</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="#openRegistration">Реєстрація</a></li>
                             <li class="header-nav-item"><a class="header-nav-link" href="#openEntry"><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
                         </ul>
                     </nav>
@@ -179,7 +180,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <a class="footer-copyright-link" href=""><p class="copyright">&#169 2020 Всі права захищені. Best App.</p></a>
+            <a class="footer-copyright-link" href=""><p class="copyright">&#169; 2020 Всі права захищені. Best App.</p></a>
         </div>
     </footer>
     
@@ -192,14 +193,15 @@
                         <h3 class="feedback-title">Форма зворотного зв'язку</h3>
                         <div class="form-input-wrapper">
                             <p class="form-input-title">Введіть ваше ім'я<br><input class="form-input" type="text" placeholder="Ваше ім'я"></p>
-                            <p class="form-input-title">Введіть адресу email<br><input class="form-input" type="email" placeholder="Адреса email"></p>
+                            <p class="form-input-title">Введіть адресу e-mail<br><input class="form-input" type="email" placeholder="Адреса e-mail"></p>
                         </div>
+                            <p class="form-input-title">Контактний телефон<br><input class="form-input" type="tel" placeholder="+38(0XX)XXXXXXX"></p>
                         <p class="form-input-title">Введіть повідомлення<br>
-                        <textarea class="form-message" rows="8" cols="100" name="text" placeholder="Ваше повідомлення"></textarea></p><br>
-                        <div class="form-check">
+                        <textarea class="form-message" rows="6" cols="100" name="text" placeholder="Ваше повідомлення"></textarea></p><br>
+                        <!--<div class="form-check">
                             <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
                             <input class="form-input" type="text" placeholder="цифра з малюнка">
-                        </div>
+                        </div>-->
                         <input class="form-input-submit" type="submit" value="Надіслати повідомлення">
                     </form>
                 </div>
@@ -211,9 +213,9 @@
             <div class="entry">
                 <div class="entry-form-wrapper">
                     <form action="" class="entry-form">
-                        <h3 class="entry-title">Увійти</h3>
+                        <h3 class="entry-title">Вхід</h3>
                         <p class="form-input-title">Введіть ваше ім'я або Email<br><input class="form-input" type="text" placeholder="Ім'я aбо email"></p>
-                        <p class="form-input-title">Введіть пароль<br><input class="form-input" type="text" placeholder="Пароль"></p>
+                        <p class="form-input-title">Введіть пароль<br><input class="form-input" type="password" placeholder="Пароль"></p>
                         <div class="form-check">
                             <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
                             <input class="form-input" type="text" placeholder="цифра з малюнка">
@@ -224,19 +226,76 @@
             </div>
     </section>
 
-    <section class="registration-modal" id="openRegistration">
+    <section class="reg-modal" id="openRegistration">
             <a href="#closeRegistration" title="Close" class="close">×</a>
-            <div class="entry">
+            <div class="registration">
                 <div class="registration-form-wrapper">
                     <form action="" class="registration-form">
                         <h3 class="registration-title">Реєстрація</h3>
-                        <p class="form-input-title">Введіть ваше ім'я або Email<br><input class="form-input" type="text" placeholder="Ім'я aбо email"></p>
-                        <p class="form-input-title">Введіть пароль<br><input class="form-input" type="text" placeholder="Пароль"></p>
+                        <h4 class="registration-attention">* Всі поля обов'язкові для заповнення</h4>
+
+                        <div class="form-input-wrapper">
+                            <p class="form-input-title">Прізвище *<br><input class="form-input input-surname" type="text" placeholder="Прізвище"></p>
+                            <p class="form-input-title">Ім'я *<br><input class="form-input input-name" type="text" placeholder="Ім'я"></p>
+                            <p class="form-input-title">По батькові<br><input class="form-input input-patronymic" type="text" placeholder="По батькові"></p>                          
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <p class="form-input-title">Рік народження<br><input class="form-input input-date" type="date"></p>
+                            <p class="form-input-title">Стать<br>
+                                <select class="form-input input-gender" size="1" name="gender" id="genderSelect">
+                                        <option value="чоловіча">чоловіча</option>
+                                        <option value="жіноча">жіноча</option>
+                                </select>
+                            </p>
+                            <p class="form-input-title">E-mail<br><input class="form-input input-email" type="email" placeholder="Адреса e-mail"></p>
+                        </div>
+
+                        <div class="form-input-wrapper">
+                            <p class="form-input-title">Контактний телефон *<br><input class="form-input" type="tel" placeholder="+38(0XX)XXXXXXX"></p>
+                            <p class="form-input-title">Місто/Область *<br>
+                                    <select class="form-input input-region" size="1" name="region" id="districtSelect">
+                                        <option value="25">обл. Чернігівська</option>
+                                        <option value="24">обл. Чернівецька</option>
+                                        <option value="23">обл. Черкаська</option>
+                                        <option value="22">обл. Хмельницька</option>
+                                        <option value="21">обл. Херсонська</option>
+                                        <option value="20">обл. Харківська</option>
+                                        <option value="19">обл. Тернопільська</option>
+                                        <option value="18">обл. Сумська</option>
+                                        <option value="17">обл. Рівненська</option>
+                                        <option value="16">обл. Полтавська</option>
+                                        <option value="15">обл. Одеська</option>
+                                        <option value="14">обл. Миколаївська</option>
+                                        <option value="13">обл. Львівська</option>
+                                        <option value="12">обл. Луганська</option>
+                                        <option value="11">обл. Кіровоградська</option>
+                                        <option value="10">обл. Івано-Франківська</option>
+                                        <option value="9">обл. Запорізька</option>
+                                        <option value="8">обл. Закарпатська</option>
+                                        <option value="7">обл. Житомирська</option>
+                                        <option value="6" selected="selected">обл. Донецька</option>
+                                        <option value="5">обл. Дніпропетровська</option>
+                                        <option value="4">обл. Волинська</option>
+                                        <option value="3">обл. Вінницька</option>
+                                        <option value="2">м. Київ</option>
+                                        <option value="1">обл. Київська</option>				
+                                </select>
+                            </p>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <p class="form-input-title">Поштовий індекс *<br><input class="form-input input-postcode" type="number" placeholder="85001"></p>
+                            <p class="form-input-title">Повна поштова адреса *<br><input class="form-input input-address" type="text" placeholder="місто, вулиця, будинок, квартира"></p>
+                        </div>
+                        <div class="form-input-wrapper">
+                            <p class="form-input-title">Пароль<br><input class="form-input" type="password" placeholder="Від 5 символів"></p>
+                            <p class="form-input-title">Повторіть пароль<br><input class="form-input" type="password" placeholder="Від 5 символів"></p>
+                        </div>
                         <div class="form-check">
                             <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
                             <input class="form-input" type="text" placeholder="цифра з малюнка">
                         </div>
-                        <input class="form-input-submit" type="submit" value="Надіслати">
+                        <input class="form-input-submit" type="submit" value="Зареєструватись">
                     </form>
                 </div>
             </div>

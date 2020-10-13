@@ -15,16 +15,13 @@ img, object, video, embed {
     max-width: 1280px;
     margin: 0 auto;
 }
-
 /* section general */
 .global {
-    height: 100vh;
+    height: 100%;
     position: relative;
     background: #F4F6F6;
 }
 .header {
-    position: absolute;
-    z-index: 100;
     width: 100%;
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
 }
@@ -58,16 +55,10 @@ img, object, video, embed {
     text-transform: none;
 }
 
-#top-nav{
-    position: fixed;
-    z-index: 100;
-    width: 100%;
- }
  .nav-btn,
  #nav-toggle {
 	display: none;
 }
-
 .header-nav-wrapper {
     background-color: rgba(255, 215, 0, 1);
     border-bottom: 1px solid #cecece;
@@ -105,52 +96,6 @@ img, object, video, embed {
 .nav-right:not(:first-child).header-nav-item .header-nav-link:hover {
     background-color: transparent;
     color: #2F4F4F;
-}
-#map {
-    height: 100vh;
-}
-
-/* section gallery */
-.gallery {
-    height: 500px;
-    background-color: #C0C0C0;
-}
-.facts-title,
-.gallery-title {
-    font-family: Montserrat;
-    font-size: 28px;
-    color:  #5a6164;
-	font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 50px 0 30px;
-}
-.gallery-title {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* section facts */
-.facts .content-container {
-    margin-bottom: 50px;
-}
-.facts-img-right {
-    float: right;
-    margin: 5px 0 2em 2em;
-}
-.facts-img-left {
-    float: left;
-    margin: 5px 2em 2em 0;
-}
-.clearfix {
-    overflow: auto;
-  }
-.facts-content {
-    font-family: Roboto;
-	font-size: 17px;
-    line-height: 26px;
-    margin-bottom: 15px;
-    text-align: justify;
-    color: #5a6164;
 }
 
 /* section footer*/
@@ -259,63 +204,46 @@ img, object, video, embed {
 	color: #2F4F4F;
 }
 
-/* modal feedback */
-.feedback-modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 200;
-    pointer-events: none;
-    margin: 0;
-    padding: 0;
-    display: none;
+/* form */
+
+.reports-form-title,
+.registration-platform-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
 }
-.feedback-modal:target {
-    display: block;
-    pointer-events: auto;
-    overflow-y: auto;
+.button-submit-wrapper {
+    justify-content: center;   
 }
-/* кнопка "Закрыть" */
-.close {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    font-family: sans-serif;
-    font-size: 48px;
-    font-weight: 100;
-    color: #fff;
-    text-shadow: 0 1px 0 #000;
-    text-decoration: none;
-}
-.close:focus, .close:hover {
-    color: #5a6164;
-    cursor: pointer;
-}
-/* end кнопка */
-.feedback {
+
+.reports-wrapper,
+.registration-platform-wrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    z-index: 200;
-}
-.feedback-form-wrapper {
-    border: 3px solid rgba(255, 215, 0, 1);
+    justify-content: center;
     max-width: 100%;
-    background-color: rgba(255, 255, 255, 1);
+    padding: 20px 0;
 }
-.feedback-title {
-    background-color: rgba(255, 215, 0, 1);
+.reports,
+.registration-platform {
+    width: 1280px;
+    max-width: 100%;
+}
+
+.reports-form-title,
+.registration-platform-title {
     padding: 10px 20px;
     color: #2F4F4F;
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
+/* form global */
 .form-input-title {
     display: block;
     width: 100%;
@@ -339,6 +267,7 @@ img, object, video, embed {
     border: 1px solid #cecece;
     border-radius: 5px;
 }
+
 .form-message {
     margin-top: 10px;
     font-family: Montserrat;
@@ -365,16 +294,16 @@ img, object, video, embed {
 .form-input-submit {
     background-color: rgba(255, 215, 0, 1);
     color: #2F4F4F;
-    padding: 10px 20px ;
     border: none;
     outline: none;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     margin: 20px;
     cursor: pointer;
     border-radius: 5px;
+    padding: 15px 30px;
 }
 .form-check {
     padding: 0 20px ;
@@ -386,96 +315,42 @@ img, object, video, embed {
     margin-right: 10px;
 }
 
-/* modal entry */
-.entry-modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 200;
-    pointer-events: none;
-    margin: 0;
-    padding: 0;
-    display: none;
+/* uploads file */
+.upload-file-title {
+    width: 210px;
 }
-.entry-modal:target {
-    display: block;
-    pointer-events: auto;
-    overflow-y: auto;
-}
-.entry {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    z-index: 200;
-}
-.entry-form-wrapper {
-    border: 3px solid rgba(255, 215, 0, 1);
-    max-width: 100%;
-    background-color: rgba(255, 255, 255, 1);
-}
-.entry-title {
-    background-color: rgba(255, 215, 0, 1);
-    padding: 10px 20px;
-    color: #2F4F4F;
+.upload-file-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+.upload-file-label {
+    background-color: #66ccff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
     font-family: Montserrat;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    transition: all 0.18s ease-in-out;
+    width: 180px;
+}
+.upload-file-label:hover {
+    color: white;
+    background: #2F4F4F;
 }
 
-/* modal registration */
-.reg-modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 200;
-    pointer-events: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-}
-.reg-modal:target {
-    display: block;
-    pointer-events: auto;
-    overflow-y: auto;
-}
-.registration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    z-index: 200;
-}
-.registration .form-input-wrapper {
-    padding: 0;
-}
-.registration-form-wrapper {
-    border: 3px solid rgba(255, 215, 0, 1);
-    background-color: rgba(255, 255, 255, 1);
-}
-.registration-title {
-    background-color: rgba(255, 215, 0, 1);
-    padding: 10px 20px;
-    color: #2F4F4F;
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.registration-attention {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 10px 20px 0; 
-    color: red;
-}
+/* end upload file */
+
 
 /* media request --------------------------------*/
 @media screen and (max-width: 1280px){
@@ -519,18 +394,7 @@ img, object, video, embed {
         font-size: 12px;
         padding: 10px;
     }
-    .facts-title,
-    .gallery-title {
-        font-size: 22px;
-    }
-    .gallery {
-        height: 390px;
-    }
-    .facts-content {
-        font-size: 15px;
-        line-height: 20px;
-        margin-bottom: 10px;
-    }
+
     .footer-nav-item {
         margin-bottom: 10px;
     }
@@ -582,109 +446,10 @@ img, object, video, embed {
         font-size: 15px;
         line-height: 10px;
     }
+    .header-nav-link .fa {
+        display: none;
+    }
 
-	/* nav-toogle */
-	#nav-toggle {
-		opacity: 0;
-	}
-	#nav-toggle:checked ~ .nav-btn > span {
-		transform: rotate(45deg);
-	}
-	#nav-toggle:checked ~ .nav-btn > span::before {
-		top: 0;
-		transform: rotate(0);
-	}
-	#nav-toggle:checked ~ .nav-btn > span::after {
-		top: 0;
-		transform: rotate(90deg);
-	}
-	#nav-toggle:checked ~ .header-nav-list {
-		visibility: visible;
-		right: 0;
-	}
-	.nav-btn {
-		display: flex;
-		align-items: center;
-		position: absolute;
-		top: 6px;
-		right: 30px;
-		width: 26px;
-		height: 26px;
-		cursor: pointer;
-		z-index: 10;
-	}
-	.nav-btn > span,
-	.nav-btn > span::before,
-	.nav-btn > span::after {
-		display: block;
-		position: absolute;
-		width: 100%;
-		height: 2px;
-		background-color: #fff;
-		transition-duration: .25s;
-	}
-	.nav-btn > span::before {
-		content: '';
-		top: -8px;
-	}
-	.nav-btn > span::after {
-		content: '';
-		top: 8px;
-    }
-    /* end nav-toogle*/
-    
-    .header-nav-wrapper {
-        height: 40px;
-    }
-    .header-nav {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        max-width: 600px;
-    }
-	.header-nav-list {
-		display: inline-block;
-		position: relative;
-		visibility: hidden;
-		top: 40px;
-		right: -100%;
-        width: 100%;
-        padding: 0;
-        text-align: left;
-        background: #ededed;
-		transition-duration: .25s;
-        z-index: 10;
-        border-bottom: 1px solid #cecece;
-    }
-    .header-nav-list:not(:last-child){
-        border-right: 1px solid #cecece;
-    }
-    .header-nav-link {
-        display: inline-block;
-        width: 100%;
-    }
-    .header-nav-link:hover {
-        background-color: #456b6b;
-    }
-    .gallery {
-        height: 360px;
-        padding: 0 20px;
-    }
-    .facts {
-        padding: 0 20px;
-    }
-    .facts-img-left,
-    .facts-img-right {
-        float: none;
-        display: block;
-        margin: 10px auto;
-    }
-    .facts-title,
-    .gallery-title {
-        font-size: 18px;
-        padding: 40px 0 20px;
-    }
     .footer {
         padding: 0 20px;
     }
@@ -715,16 +480,7 @@ img, object, video, embed {
         justify-content: center;
         align-items: center;
     }
-    .feedback {
-        margin: 0 20px;
-    }
-    .entry {
-        margin: 0 20px;
-    }
-    .registration {
-        margin: 10px;
-        display: block;
-    }
+
 }
 @media screen and (max-width: 400px){
     .logo {
@@ -737,20 +493,14 @@ img, object, video, embed {
     .logo-title-highlight {
         font-size: 13px;
     }
-    .header-nav-wrapper {
-        height: 40px;
+    .header-nav {
+        padding: 8px;
     }
     .header-nav-link {
         font-size: 10px;
-        padding: 10px;
+        padding: 10px 10px;
     }
-    .gallery {
-        height: 380px;
-        padding: 0 20px;
-    }
-    .facts {
-        padding: 0 20px;
-    }
+
     .footer {
         padding: 0 20px;
     }
@@ -767,15 +517,18 @@ img, object, video, embed {
     .copyright {
         font-size: 10px;
     }
-    .close {
-        top: 5px;
-        right: 20px;
-    }
     .form-input-wrapper {
         display: block;
         padding: 0 10px;
     }
     .form-input-title {
         padding: 10px;
+    }
+    .upload-file {
+        display: flex;
+    }
+    .upload-file-title {
+        width: 190px;
+        padding-right: 0;
     }
 }

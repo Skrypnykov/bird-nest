@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../css/font-awesome.min.css" />
 	<link rel="stylesheet" href="../owlcarousel/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="../owlcarousel/assets/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
 
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
@@ -22,6 +22,8 @@
 	<title>Реєстрація платформи</title>
 </head>
 <body>
+
+    <!-- section global -->
     <section class="global">
         <header class="header">
             <div class="content-container">
@@ -43,6 +45,7 @@
                         <ul class="header-nav-list">
                             <li class="header-nav-item"><a class="header-nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i>Головна</a></li>
                             <li class="header-nav-item"><a class="header-nav-link nav-link-active" href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Реєстрація платформи</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="reports.html"><i class="fa fa-twitter" aria-hidden="true"></i>Звіти</a></li>
                         </ul>
                         <ul class="header-nav-list nav-right">
                             <li class="header-nav-item"><a class="header-nav-link" href="../index.html#openEntry"><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
@@ -52,7 +55,65 @@
                 </div>
             </div>
         </header>
-    </section>    
+        <div class="registration-platform-wrapper">            
+                <div class="registration-platform">
+                    <form action="" class="registration-platform-form">
+                        <h3 class="registration-platform-title">Реєстрація нової платформи</h3>
+                            <div class="form-input-wrapper">
+                                <p class="form-input-title">Місто/Область *<br>
+                                    <select class="form-input input-region" size="1" name="region" id="districtSelect">
+                                        <option value="25">обл. Чернігівська</option>
+                                        <option value="24">обл. Чернівецька</option>
+                                        <option value="23">обл. Черкаська</option>
+                                        <option value="22">обл. Хмельницька</option>
+                                        <option value="21">обл. Херсонська</option>
+                                        <option value="20">обл. Харківська</option>
+                                        <option value="19">обл. Тернопільська</option>
+                                        <option value="18">обл. Сумська</option>
+                                        <option value="17">обл. Рівненська</option>
+                                        <option value="16">обл. Полтавська</option>
+                                        <option value="15">обл. Одеська</option>
+                                        <option value="14">обл. Миколаївська</option>
+                                        <option value="13">обл. Львівська</option>
+                                        <option value="12">обл. Луганська</option>
+                                        <option value="11">обл. Кіровоградська</option>
+                                        <option value="10">обл. Івано-Франківська</option>
+                                        <option value="9">обл. Запорізька</option>
+                                        <option value="8">обл. Закарпатська</option>
+                                        <option value="7">обл. Житомирська</option>
+                                        <option value="6" selected="selected">обл. Донецька</option>
+                                        <option value="5">обл. Дніпропетровська</option>
+                                        <option value="4">обл. Волинська</option>
+                                        <option value="3">обл. Вінницька</option>
+                                        <option value="2">м. Київ</option>
+                                        <option value="1">обл. Київська</option>				
+                                    </select>
+                                </p>
+                                <p class="form-input-title">Район<br><input class="form-input" type="text" placeholder="район"></p>
+                                <p class="form-input-title">Населений пункт<br><input class="form-input" type="text" placeholder="найближчий населений пункт"></p>
+                            </div>
+                            <div class="form-input-wrapper">
+                                <p class="form-input-title">Лінія електропередачі *<br><input class="form-input" type="number" placeholder="ЛЕП"></p>
+                                <p class="form-input-title">Координати *<br><input class="form-input" type="text" placeholder="48.473734, 37.082929"></p>
+                            </div>
+                            <p class="form-input-title">Опис платформи, додаткова інформація<br>
+                            <textarea class="form-message" rows="6" cols="100" name="text" placeholder="додаткова информация"></textarea></p><br> 
+                            
+                            <div class="form-input-wrapper upload-file">
+                                <p class="form-input-title upload-file-title">Додати фотографіі</p>
+                                <label for="myfile" class="upload-file-label">Виберіть файли</label>
+                                <input type="file" class="upload-file-input" id="myfile" name="myfile" multiple>
+                            </div>
+
+                            <div class="form-input-wrapper button-submit-wrapper">
+                                <input class="form-input-submit" type="submit" value="Зареєструвати платформу">
+                            </div>
+                    </form>
+                </div>
+        </div>
+    </section> <!-- end global section-->
+    
+    <!-- footer-->
     <footer class="footer">
         <div class="content-container">
             <div class="footer-content-wrapper">
@@ -94,12 +155,12 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <a class="footer-copyright-link" href=""><p class="copyright">&#169 2020 Всі права захищені. Best App.</p></a>
+            <a class="footer-copyright-link" href=""><p class="copyright">&#169; 2020 Всі права захищені. Best App.</p></a>
         </div>
-    </footer>
+    </footer><!-- end footer-->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="../owlcarousel/owl.carousel.min.js"></script>
-	<script src="../js/script.js"></script>
+	<script src="../js/pages.js"></script>
 </body>
 </html>
