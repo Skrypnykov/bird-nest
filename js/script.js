@@ -1,7 +1,7 @@
 // owl carousel
 $(document).ready(function(){
     const slider = $("#slider").owlCarousel({
-        margin:10,
+        margin:20,
         dots:true,
         loop:true,
         autoplay:true,
