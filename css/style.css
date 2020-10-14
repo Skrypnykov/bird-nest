@@ -62,6 +62,7 @@ img, object, video, embed {
     position: fixed;
     z-index: 100;
     width: 100%;
+
  }
  .nav-btn,
  #nav-toggle {

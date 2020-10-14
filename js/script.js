@@ -1,23 +1,3 @@
-// navbar
-var h_hght = document.getElementById('top-logo').clientHeight;
-var h_mrg = 0;
-                 
-$(function(){
-    var elem = $('#top-nav');
-    var top = $(this).scrollTop();
-    if(top > h_hght){
-        elem.css('top', h_mrg);
-    }           
-    $(window).scroll(function(){
-        top = $(this).scrollTop();
-        if (top+h_mrg < h_hght) {
-            elem.css('top', (h_hght-top));
-        } else {
-            elem.css('top', h_mrg);
-        }
-    });
-});
-
 // owl carousel
 $(document).ready(function(){
     const slider = $("#slider").owlCarousel({
@@ -41,9 +21,4 @@ $(document).ready(function(){
             }
         }
     });
-});
-
-$('.upload-file-input').change(function() {
-    if ($(this).val() != '') $(this).prev().text('Вибрано файлів: ' + $(this)[0].files.length);
-    else $(this).prev().text('Виберіть файли');
 });
