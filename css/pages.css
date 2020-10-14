@@ -55,10 +55,22 @@ img, object, video, embed {
     text-transform: none;
 }
 
- .nav-btn,
- #nav-toggle {
+
+/* navbar */
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+ }
+
+ /* navbar button */
+.nav-btn,
+#nav-toggle {
 	display: none;
 }
+
 .header-nav-wrapper {
     background-color: rgba(255, 215, 0, 1);
     border-bottom: 1px solid #cecece;
@@ -329,7 +341,6 @@ img, object, video, embed {
     position: absolute;
     z-index: -1;
   }
-
 .upload-file-label {
     background-color: #66ccff;
     color: #fff;
@@ -350,22 +361,23 @@ img, object, video, embed {
     color: white;
     background: #2F4F4F;
 }
-
 /* end upload file */
+
 .reports-line {
     border: 1px dotted #2F4F4F;
 }
+
 /* report table */
 .report-display {
     padding: 30px 0;
 }
-.report-table-wrapper {
-    max-width: 100%;
-}
+
 .report-table {
-    width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
     border: 2px solid  #2F4F4F;
+    border-collapse: collapse;
 }
 .report-table-title {
     font-family: Roboto;
@@ -382,6 +394,14 @@ img, object, video, embed {
     font-size: 14px;
     font-weight: 600;
     color: #2F4F4F;
+    border: 1px solid #2F4F4F;
+}
+.table-row-head {
+    border: 2px solid #2F4F4F;
+}
+.table-row-head th,
+.table-row td{
+    border: 1px solid #2F4F4F;
 }
 .table-row-head,
 .table-row td:nth-child(1),
@@ -389,6 +409,7 @@ img, object, video, embed {
 .table-row td:nth-child(3),
 .table-row td:nth-child(4) {
     text-align: center;
+    width: 20px;
 
 }
 .table-row td:nth-child(3),
@@ -496,8 +517,94 @@ img, object, video, embed {
         font-size: 15px;
         line-height: 10px;
     }
-    .header-nav-link .fa {
+
+    /* nav-toogle */
+	#nav-toggle {
+		opacity: 0;
+	}
+	#nav-toggle:checked ~ .nav-btn > span {
+		transform: rotate(45deg);
+	}
+	#nav-toggle:checked ~ .nav-btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	}
+	#nav-toggle:checked ~ .nav-btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	}
+	#nav-toggle:checked ~ .header-nav-list {
+        display: inline-block;
+        right: 0;
+	}
+	.nav-btn {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		top: 8px;
+		right: 30px;
+		width: 26px;
+		height: 26px;
+		cursor: pointer;
+        z-index: 10;
+	}
+	.nav-btn > span,
+	.nav-btn > span::before,
+	.nav-btn > span::after {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #fff;
+		transition-duration: .25s;
+	}
+	.nav-btn > span::before {
+		content: '';
+		top: -8px;
+	}
+	.nav-btn > span::after {
+		content: '';
+		top: 8px;
+    }
+    /* end nav-toogle*/
+    
+    .header-nav-wrapper {
+        height: 40px;
+    }
+    .header-nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        max-width: 600px;
+    }
+	.header-nav-list {
         display: none;
+		position: relative;
+		top: 40px;
+		right: -100%;
+        width: 100%;
+        padding: 0;
+        text-align: left;
+        background: #ededed;
+		transition-duration: .25s;
+        z-index: 10;
+        border-bottom: 1px solid #cecece;
+    }
+    .header-nav-list:not(:last-child){
+        border-right: 1px solid #cecece;
+    }
+    .header-nav-link {
+        display: inline-block;
+        width: 100%;
+    }
+    .header-nav-link:hover {
+        background-color: #456b6b;
+    }
+    
+    .report-table-wrapper {
+        padding: 5px;
     }
 
     .footer {
@@ -543,14 +650,15 @@ img, object, video, embed {
     .logo-title-highlight {
         font-size: 13px;
     }
-    .header-nav {
-        padding: 8px;
-    }
     .header-nav-link {
         font-size: 10px;
         padding: 10px 10px;
     }
 
+    .table-row-head,
+    .table-row {
+        font-size: 10px;
+    }
     .footer {
         padding: 0 20px;
     }

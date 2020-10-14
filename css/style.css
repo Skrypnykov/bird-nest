@@ -18,13 +18,14 @@ img, object, video, embed {
 
 /* section general */
 .global {
-    height: 100vh;
+    -height: 100vh;
     position: relative;
     background: #F4F6F6;
 }
+
 .header {
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     width: 100%;
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
 }
@@ -40,7 +41,6 @@ img, object, video, embed {
     align-items: center;
 }
 .logo {
-    margin: 0;
     align-items: flex-end;
 }
 .logo-title {
@@ -58,14 +58,18 @@ img, object, video, embed {
     text-transform: none;
 }
 
-#top-nav{
+/* navbar */
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky{
     position: fixed;
-    z-index: 100;
+    top: 0;
     width: 100%;
-
+    z-index: 100;
  }
- .nav-btn,
- #nav-toggle {
+
+ /* navbar button */
+.nav-btn,
+#nav-toggle {
 	display: none;
 }
 
@@ -76,10 +80,11 @@ img, object, video, embed {
 .header-nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0;
 }
 .header-nav-list {
     display: flex;
+    justify-content: flex-start;
 }
 .header-nav-item {
     list-style: none;
@@ -284,8 +289,8 @@ img, object, video, embed {
 /* кнопка "Закрыть" */
 .close {
     position: absolute;
-    top: 0;
-    right: 5px;
+    top: 5px;
+    right: 20px;
     font-family: sans-serif;
     font-size: 48px;
     font-weight: 100;
@@ -602,19 +607,19 @@ img, object, video, embed {
 		transform: rotate(90deg);
 	}
 	#nav-toggle:checked ~ .header-nav-list {
-		visibility: visible;
-		right: 0;
+        display: inline-block;
+        right: 0;
 	}
 	.nav-btn {
 		display: flex;
 		align-items: center;
 		position: absolute;
-		top: 6px;
+		top: 8px;
 		right: 30px;
 		width: 26px;
 		height: 26px;
 		cursor: pointer;
-		z-index: 10;
+        z-index: 10;
 	}
 	.nav-btn > span,
 	.nav-btn > span::before,
@@ -640,6 +645,7 @@ img, object, video, embed {
         height: 40px;
     }
     .header-nav {
+        position: relative;
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -647,9 +653,8 @@ img, object, video, embed {
         max-width: 600px;
     }
 	.header-nav-list {
-		display: inline-block;
+        display: none;
 		position: relative;
-		visibility: hidden;
 		top: 40px;
 		right: -100%;
         width: 100%;
@@ -670,6 +675,7 @@ img, object, video, embed {
     .header-nav-link:hover {
         background-color: #456b6b;
     }
+
     .gallery {
         height: 360px;
         padding: 0 20px;
@@ -688,6 +694,7 @@ img, object, video, embed {
         font-size: 18px;
         padding: 40px 0 20px;
     }
+    
     .footer {
         padding: 0 20px;
     }
