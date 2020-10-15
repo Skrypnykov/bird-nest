@@ -2,7 +2,6 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2tyeXBueWtvdiIsImEiOiJja2ZsYTdkbzEwZGdqMnFwc2dyMHBnZTl0In0.XQ6qUunUpxoUThIMrGLbPQ';
 var map = new mapboxgl.Map({
     container: 'map',
-    //style: 'https://api.maptiler.com/maps/basic/style.json?key=gbetYLSD5vR8MdtZ88AQ',
     style: 'mapbox://styles/osmua/ck4wswg1w00c81clktu2l8ekz',
     center: [32, 49.55],
     zoom: 5.2,
