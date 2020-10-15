@@ -371,10 +371,8 @@ img, object, video, embed {
 .report-display {
     padding: 30px 0;
 }
-
 .report-table {
     border-collapse: collapse;
-    table-layout: fixed;
     width: 100%;
     border: 2px solid  #2F4F4F;
     border-collapse: collapse;

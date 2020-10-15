@@ -6,7 +6,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="../css/font-awesome.min.css" />
-
     <link rel="stylesheet" href="../css/pages.css" />
     
     <!--[if lt IE 9]>
@@ -116,13 +115,13 @@
                             <th>Номер в реєстрі</th><th>Координати</th><th>Область</th><th>Дата реестрації</th><th>Опис, додаткова інформація</th><th>Фото</th>
                         </tr>
                         <tr class="table-row">
-                            <td>1</td><td>48.473734, 37.082929</td><td>Донецька обл.</td><td>24.08.2018</td><td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan sed lacus a tincidunt. Maecenas lorem elit, gravida vitae dictum.</td><td class="table-col-img"><img src="../img/img-1.png" alt=""></td>
+                            <td>1</td><td>48.473734, 37.082929</td><td>Донецька обл.</td><td>24.08.2020</td><td>Реконструюване гніздо. Гніздо перенесли до діючої анкерної опори ПЛ 35 кВ на спеціально встановлену стійку СК-22.</td><td class="table-col-img"><img src="../img/img-1.png" alt=""></td>
                         </tr>
                         <tr class="table-row">
-                            <td>2</td><td>48.749060, 39.260875</td><td>Луганська обл.</td><td>21.01.2017</td><td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan sed lacus a tincidunt. Maecenas lorem elit, gravida vitae dictum.</td><td class="table-col-img"><img src="../img/img-2.png" alt=""></td>
+                            <td>2</td><td>48.749060, 39.260875</td><td>Луганська обл.</td><td>12.05.2020</td><td>Реконструюване гніздо. Гніздо встановлене на опорі 0,4 - 10 кВ</td><td class="table-col-img"><img src="../img/img-2.png" alt=""></td>
                         </tr>
                         <tr class="table-row">
-                            <td>3</td><td>48.473734, 37.082929</td><td>Дніпропетровська обл.</td><td>27.04.2016</td><td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus accumsan sed lacus a tincidunt. Maecenas lorem elit, gravida vitae dictum.</td><td class="table-col-img"><img src="../img/img-3.png" alt=""></td>
+                            <td>3</td><td>48.473734, 37.082929</td><td>Дніпропетровська обл.</td><td>27.04.2020</td><td>Реконструюване гніздо. Гніздо встановлене на опорі 0,4 - 10 кВ</td><td class="table-col-img"><img src="../img/img-3.png" alt=""></td>
                         </tr>                
                     </table>
                 </div><!-- end report-table-wrapper -->
@@ -179,17 +178,12 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        // navbar scroll
-        // When the user scrolls the page, execute myFunction
+        // navbar on scroll
         window.onscroll = function() {myFunction()};
 
-        // Get the navbar
         var navbar = document.getElementById("top-nav");
-
-        // Get the offset position of the navbar
         var sticky = navbar.offsetTop;
 
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")

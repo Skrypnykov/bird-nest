@@ -33,14 +33,14 @@ map.on('click', function() {
 });
 
 // Map markers 
-var marker = new mapboxgl.Marker({ color: 'red' })
-.setLngLat([37.55, 47.15])
-.addTo(map);
-
 var marker = new mapboxgl.Marker({ color: 'green' })
-.setLngLat([30.51, 50.47])
+.setLngLat([37.082929, 48.473734])
 .addTo(map);
 
-var marker = new mapboxgl.Marker({ color: 'blue' })
-.setLngLat([37.08, 48.47])
+var marker = new mapboxgl.Marker({ color: 'red' })
+.setLngLat([39.260875, 48.749060])
+.addTo(map);
+
+var marker = new mapboxgl.Marker({ color: 'rgba(255, 215, 0, 1)' })
+.setLngLat([33.503404, 48.345026])
 .addTo(map);
