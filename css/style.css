@@ -145,7 +145,7 @@ img, object, video, embed {
     font-size: 28px;
 	font-weight: 600;
     text-transform: uppercase;
-    padding: 30px 0 20px;   
+    padding: 50px 0 20px;   
 }
 .gallery-title {
     position: relative;
@@ -157,7 +157,7 @@ img, object, video, embed {
     content: '';
     position: absolute;
     border-bottom: 3px solid #fff;
-    top:55%;
+    top: 65%;
     right: 0;
 }
 .gallery-title::after {
@@ -166,7 +166,7 @@ img, object, video, embed {
     content: '';
     position: absolute;
     border-bottom: 3px solid #fff;
-    top:55%;
+    top:65%;
     left: 0;
 }
 
