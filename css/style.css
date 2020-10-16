@@ -118,6 +118,20 @@ img, object, video, embed {
     height: 80vh;
 }
 
+.global-choice-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+
+}
+.global-choice {
+    background: rgba(248, 242, 248, 0.7);
+}
+.global-choice-input {
+    margin: 30px;
+}
+
+
 /* section gallery */
 .gallery {
     height: 500px;
