@@ -18,7 +18,7 @@ img, object, video, embed {
 
 /* section general */
 .global {
-    -height: 100vh;
+
     position: relative;
     background: #F4F6F6;
 }
@@ -115,13 +115,15 @@ img, object, video, embed {
 }
 
 #map {
-    height: 100vh;
+    height: 80vh;
 }
 
 /* section gallery */
 .gallery {
     height: 500px;
     background-color: #C0C0C0;
+    position: relative;
+    text-align: center;
 }
 .facts-title,
 .gallery-title {
@@ -129,12 +131,14 @@ img, object, video, embed {
     font-size: 28px;
 	font-weight: 600;
     text-transform: uppercase;
-    text-align: center;
     padding: 50px 0 30px;
+    display: inline-block;
+   
 }
 .gallery-title {
-    color: rgba(255, 255, 255, 0.9);
+    color:  #fff;
 }
+
 .slider-item-img {
     background-color: #fff;
     padding: 15px;
@@ -174,6 +178,7 @@ img, object, video, embed {
 
 /* section facts */
 .facts .content-container {
+    text-align: center;
     margin-bottom: 50px;
 }
 .facts-title {
@@ -469,6 +474,21 @@ img, object, video, embed {
     color: #2F4F4F;
     font-family: Montserrat;
     font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form-entry-reg {
+    padding: 20px 20px 0;
+    display: flex;
+}
+.entry-reg-link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #2F4F4F;
+}
+.entry-reg-content {
+    font-family: Montserrat;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
 }

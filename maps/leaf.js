@@ -4,9 +4,14 @@ var map = L.map( 'map', {
   style: 'mapbox://styles/osmua/ck4wswg1w00c81clktu2l8ekz',
   center: [50.2, 31.25],
   minZoom: 6,
-  zoom: 6
+  zoom: 6,
+  scrollWheelZoom: false,  
+  zoomControl: false
 });
 
+new L.Control.Zoom({ 
+  position: 'bottomright' 
+}).addTo(map);
 
 
 L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -24,6 +29,7 @@ var myIcon = L.icon({
   popupAnchor: [0, -14]
 });
 
+// markerClusterGroup
 var markerClusters = L.markerClusterGroup();
 
 for ( var i = 0; i < markers.length; ++i ) {
@@ -36,7 +42,6 @@ for ( var i = 0; i < markers.length; ++i ) {
 
   var m = L.marker( [markers[i].lat, markers[i].lng], {icon: myIcon} )
                   .bindPopup( popup );
-
   markerClusters.addLayer( m );
 }
 map.addLayer( markerClusters );

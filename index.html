@@ -5,30 +5,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css" />
     <link rel="stylesheet" href="css/style.css" />
-    
+
     <!-- Mapbox GL -->  
-    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
-	
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+
     <!-- Leaflet Cluster -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-  crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
-	
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
-<!--
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
-    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
-    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
-  -->
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='https://unpkg.com/leaflet@0.7.7/dist/leaflet.js'></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -57,12 +51,12 @@
                         <label class="nav-btn" for="nav-toggle"><span></span></label>
                         <ul class="header-nav-list">
                             <li class="header-nav-item"><a class="header-nav-link nav-link-active" href="#"><i class="fa fa-home" aria-hidden="true"></i>Головна</a></li>
-                            <li class="header-nav-item"><a class="header-nav-link" href="pages/platform.html"><i class="fa fa-map-marker" aria-hidden="true"></i>Реєстрація платформи</a></li>
-                            <li class="header-nav-item"><a class="header-nav-link" href="pages/reports.html"><i class="fa fa-twitter" aria-hidden="true"></i>Звіти</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="pages/platform.html"><i class="fa fa-map-marker" aria-hidden="true"></i>Додати пташине гніздо</a></li>
+                            <li class="header-nav-item"><a class="header-nav-link" href="pages/reports.html"><i class="fa fa-twitter" aria-hidden="true"></i>Перевірка стану гнізда</a></li>
                             <li class="header-nav-item"><a class="header-nav-link" href="#openFeedback"><i class="fa fa-envelope-o" aria-hidden="true"></i>Зворотний зв'язок</a></li>
                         </ul>
                         <ul class="header-nav-list nav-right">
-                            <li class="header-nav-item"><a class="header-nav-link" href="#openRegistration">Реєстрація</a></li>
+                            <!--<li class="header-nav-item"><a class="header-nav-link" href="#openRegistration">Реєстрація</a></li>-->
                             <li class="header-nav-item"><a class="header-nav-link" href="#openEntry"><i class="fa fa-sign-out" aria-hidden="true"></i>Вхід</a></li>
                         </ul>
                     </nav>
@@ -78,6 +72,7 @@
     <section class="gallery" id="gallery">
         <div class="content-container">
 			<h2 class="gallery-title">Наша галерея</h2>
+			<div class="gallery-slider-wrapper">
 			<div class="gallery-slider owl-carousel owl-theme owl-loaded" id="slider">
 				<div class="owl-stage-outer">
 					<div class="gallery-slider-list owl-stage">
@@ -161,26 +156,12 @@
         <div class="content-container">
             <div class="footer-content-wrapper">
                 <h3 class="footer-content-title">Про проект</h3>
-                <p class="footer-content">Лелеки можуть гніздитися на опорах лінії
-                    електропередачі. Це небезпечно і для птахів, і для
-                    мереж, тому що гніздо вагою до 500 кілограмів може
-                    сповзти вниз, на дроти. В 2012 році ДТЕК запровадив
-                    спеціальну програму орнітологічної безпеки. Це
-                    відповідає принципам Глобального договору ООН, яких
-                    дотримується Група ДТЕК у галузі охорони довкілля. Як
-                    відповідальний бізнес, ДТЕК інтегрував цілі сталого
-                    розвитку ООН у свою стратегію ESG.</p>
-                <p class="footer-content">Енергетики встановлюють на електроопори, уподобані
-                    лелеками, спеціальні платформи, які міцно тримають
-                    гнізда.</p>
-                <p class="footer-content">Вже встановлено 178 платформ у Дніпровському,
-                    Донецькому, Київському та Одеському регіоні.</p>
+                <p class="footer-content">Лелеки можуть гніздитися на опорах лінії електропередачі. Це небезпечно і для птахів, і для мереж, тому що гніздо вагою до 500 кілограмів може сповзти вниз, на дроти. Цей проект націлений на спеціальну програму орнітологічної безпеки. Це відповідає принципам Глобального договору ООН у галузі охорони довкілля. </p>
+                <p class="footer-content">Після перевірки Вашої інформації, енергетики встановлюють на електроопори уподобані лелеками, спеціальні платформи, які міцно тримають гнізда.</p>
             </div>
              <nav class="footer-nav">
                 <h3 class="footer-nav-title">Навігація</h3>
                 <ul class="footer-nav-list">
-                    <li class="footer-nav-item"><a class="footer-nav-link" href="pages/platform.html">Реєстрація платформи</a></li>
-                    <li class="footer-nav-item"><a class="footer-nav-link" href="pages/reports.html">Звіти про роботу</a></li>
                     <li class="footer-nav-item"><a class="footer-nav-link" href="#gallery">Наша галерея</a></li>
                     <li class="footer-nav-item"><a class="footer-nav-link" href="#facts">Цікаві факти</a></li>
                 </ul>
@@ -239,6 +220,11 @@
                             <img src="img/captcha.png" alt="" class="check-img"> <input class="form-input-reset" type="reset" value="Оновити">
                             <input class="form-input" type="text" placeholder="цифра з малюнка">
                         </div>
+                        <div class="form-entry-reg">
+                            <a class="entry-reg-link" href="#"><p class="entry-reg-content">Забули пароль?</p></a>
+                            <a class="entry-reg-link" href="#openRegistration"><p class="entry-reg-content">Реєстрація</p></a>
+                            
+                        </div>
                         <input class="form-input-submit" type="submit" value="Увійти">
                     </form>
                 </div>
@@ -256,56 +242,24 @@
                         <div class="form-input-wrapper">
                             <p class="form-input-title">Прізвище *<br><input class="form-input input-surname" type="text" placeholder="Прізвище"></p>
                             <p class="form-input-title">Ім'я *<br><input class="form-input input-name" type="text" placeholder="Ім'я"></p>
-                            <p class="form-input-title">По батькові<br><input class="form-input input-patronymic" type="text" placeholder="По батькові"></p>                          
+                                                 
                         </div>
 
                         <div class="form-input-wrapper">
-                            <p class="form-input-title">Рік народження<br><input class="form-input input-date" type="date"></p>
+                            <p class="form-input-title">По батькові<br><input class="form-input input-patronymic" type="text" placeholder="По батькові"></p>     
+       
                             <p class="form-input-title">Стать<br>
                                 <select class="form-input input-gender" size="1" name="gender" id="genderSelect">
                                         <option value="чоловіча">чоловіча</option>
                                         <option value="жіноча">жіноча</option>
                                 </select>
                             </p>
-                            <p class="form-input-title">E-mail<br><input class="form-input input-email" type="email" placeholder="Адреса e-mail"></p>
-                        </div>
-
-                        <div class="form-input-wrapper">
-                            <p class="form-input-title">Контактний телефон *<br><input class="form-input" type="tel" placeholder="+38(0XX)XXXXXXX"></p>
-                            <p class="form-input-title">Місто/Область *<br>
-                                    <select class="form-input input-region" size="1" name="region" id="districtSelect">
-                                        <option value="25">обл. Чернігівська</option>
-                                        <option value="24">обл. Чернівецька</option>
-                                        <option value="23">обл. Черкаська</option>
-                                        <option value="22">обл. Хмельницька</option>
-                                        <option value="21">обл. Херсонська</option>
-                                        <option value="20">обл. Харківська</option>
-                                        <option value="19">обл. Тернопільська</option>
-                                        <option value="18">обл. Сумська</option>
-                                        <option value="17">обл. Рівненська</option>
-                                        <option value="16">обл. Полтавська</option>
-                                        <option value="15">обл. Одеська</option>
-                                        <option value="14">обл. Миколаївська</option>
-                                        <option value="13">обл. Львівська</option>
-                                        <option value="12">обл. Луганська</option>
-                                        <option value="11">обл. Кіровоградська</option>
-                                        <option value="10">обл. Івано-Франківська</option>
-                                        <option value="9">обл. Запорізька</option>
-                                        <option value="8">обл. Закарпатська</option>
-                                        <option value="7">обл. Житомирська</option>
-                                        <option value="6" selected="selected">обл. Донецька</option>
-                                        <option value="5">обл. Дніпропетровська</option>
-                                        <option value="4">обл. Волинська</option>
-                                        <option value="3">обл. Вінницька</option>
-                                        <option value="2">м. Київ</option>
-                                        <option value="1">обл. Київська</option>				
-                                </select>
-                            </p>
                         </div>
                         <div class="form-input-wrapper">
-                            <p class="form-input-title">Поштовий індекс *<br><input class="form-input input-postcode" type="number" placeholder="85001"></p>
-                            <p class="form-input-title">Повна поштова адреса *<br><input class="form-input input-address" type="text" placeholder="місто, вулиця, будинок, квартира"></p>
-                        </div>
+                            <p class="form-input-title">Рік народження *<br><input class="form-input input-date" type="date"></p>
+                            <p class="form-input-title">E-mail *<br><input class="form-input input-email" type="email" placeholder="Адреса e-mail"></p>
+                            <p class="form-input-title">Телефон *<br><input class="form-input" type="tel" placeholder="+38(0XX)XXXXXXX"></p>
+                        </div>    
                         <div class="form-input-wrapper">
                             <p class="form-input-title">Пароль<br><input class="form-input" type="password" placeholder="Від 5 символів"></p>
                             <p class="form-input-title">Повторіть пароль<br><input class="form-input" type="password" placeholder="Від 5 символів"></p>
@@ -320,8 +274,8 @@
             </div>
     </section> 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="owlcarousel/owl.carousel.min.js"></script>
+
+	<script src="owlcarousel/owl.carousel.min.js"></script>
     <script>
         // navbar on scroll
         window.onscroll = function() {myFunction()};
@@ -337,18 +291,14 @@
             }
         }
     </script>
-
+    
+    
     <script src="js/script.js"></script>
     <script src="js/modal.js"></script>
-	
-    <script src="js/map.js"></script>
-    
 
-    <!-- <script type='text/javascript' src='https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js'></script>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
     
     <script type='text/javascript' src='maps/markers.js'></script>
-    <script type='text/javascript' src='maps/leaf.js'></script> -->
-	
+    <script type='text/javascript' src='maps/leaf.js'></script>
+
 </body>
 </html>
