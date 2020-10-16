@@ -29,6 +29,31 @@ var myIcon = L.icon({
   popupAnchor: [0, -14]
 });
 
+var myIconRed = L.icon({
+  iconUrl: myURL + 'images/red24.png',
+  iconRetinaUrl: myURL + 'images/red48.png',
+  iconSize: [15, 24],
+  iconAnchor: [9, 21],
+  popupAnchor: [0, -14]
+});
+
+var myIconGreen = L.icon({
+  iconUrl: myURL + 'images/green24.png',
+  iconRetinaUrl: myURL + 'images/green48.png',
+  iconSize: [15, 24],
+  iconAnchor: [9, 21],
+  popupAnchor: [0, -14]
+});
+
+var myIconYellow = L.icon({
+  iconUrl: myURL + 'images/yellow24.png',
+  iconRetinaUrl: myURL + 'images/yellow48.png',
+  iconSize: [15, 24],
+  iconAnchor: [9, 21],
+  popupAnchor: [0, -14]
+});
+
+
 // markerClusterGroup
 var markerClusters = L.markerClusterGroup();
 
@@ -46,3 +71,15 @@ for ( var i = 0; i < markers.length; ++i ) {
 }
 map.addLayer( markerClusters );
 
+// ручное добавление маркера 
+var marker = L.marker([48.473734, 37.082929], {icon: myIconGreen} );
+marker.bindPopup('48.473734, 37.082929').openPopup();
+marker.addTo(map);
+
+var marker = L.marker([48.749060, 39.260875], {icon: myIconRed} );
+marker.bindPopup('48.749060, 39.260875').openPopup();
+marker.addTo(map);
+
+var marker = L.marker([48.344774, 33.504967], {icon: myIconYellow} );
+marker.bindPopup('48.344774, 33.504967').openPopup();
+marker.addTo(map);
