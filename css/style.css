@@ -18,7 +18,6 @@ img, object, video, embed {
 
 /* section general */
 .global {
-
     position: relative;
     background: #F4F6F6;
 }
@@ -115,7 +114,7 @@ img, object, video, embed {
 }
 
 #map {
-    height: 90vh;
+    height: 100vh;
 }
 
 .global-choice-wrapper {
