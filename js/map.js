@@ -35,15 +35,15 @@ map.on('click', function() {
 // Map markers 
 var marker = new mapboxgl.Marker({ color: 'green' })
 .setLngLat([37.082929, 48.473734])
-.setPopup(new mapboxgl.Popup().setHTML("<h4>Зелений</h4>"))
+.setPopup(new mapboxgl.Popup().setHTML("<span>48.473734, 37.082929</span>"))
 .addTo(map);
 
 var marker = new mapboxgl.Marker({ color: 'red' })
 .setLngLat([39.260875, 48.749060])
-.setPopup(new mapboxgl.Popup().setHTML("<h4>Червоний</h4>"))
+.setPopup(new mapboxgl.Popup().setHTML("<span>Червоний</span>"))
 .addTo(map);
 
 var marker = new mapboxgl.Marker({ color: 'rgba(255, 215, 0, 1)' })
 .setLngLat([33.503404, 48.345026])
-.setPopup(new mapboxgl.Popup().setHTML("<h4>Жовтий</h4>"))
+.setPopup(new mapboxgl.Popup().setHTML("<span>Жовтий</span>"))
 .addTo(map);
