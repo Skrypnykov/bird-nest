@@ -53,7 +53,6 @@ var myIconYellow = L.icon({
   popupAnchor: [0, -14]
 });
 
-
 // markerClusterGroup
 var markerClusters = L.markerClusterGroup();
 
