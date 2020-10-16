@@ -2,7 +2,7 @@
 
 var map = L.map( 'map', {
   style: 'mapbox://styles/osmua/ck4wswg1w00c81clktu2l8ekz',
-  center: [50.2, 31.25],
+  center: [49.3, 31.25],
   minZoom: 6,
   zoom: 6,
   scrollWheelZoom: false,  
@@ -45,3 +45,4 @@ for ( var i = 0; i < markers.length; ++i ) {
   markerClusters.addLayer( m );
 }
 map.addLayer( markerClusters );
+
