@@ -151,8 +151,8 @@ img, object, video, embed {
 }
 .map-legend-text {
     font-family: Montserrat;
-    font-size: 8px;
-	font-weight: 500;
+    font-size: 10px;
+	font-weight: 600;
     text-transform: uppercase;
     color: #000;
     margin-left: 10px;
