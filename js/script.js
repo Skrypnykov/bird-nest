@@ -1,23 +1,26 @@
-// owl carousel
 $(document).ready(function(){
-    const slider = $("#slider").owlCarousel({
-        dots:true,
-        loop:true,
-        autoplay:true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:false
+    $('.gallery-slider-list').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+              breakpoint: 650,
+                settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false,
+              }
             },
-            600:{
-                items:2,
-                nav:false
-            },
-            900:{
-                items:3,
-                nav:true
+            {
+              breakpoint: 450,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+              }
             }
-        }
+        ]
     });
-});
+  });

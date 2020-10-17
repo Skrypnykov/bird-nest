@@ -55,7 +55,6 @@ img, object, video, embed {
     text-transform: none;
 }
 
-
 /* navbar */
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky{
@@ -70,7 +69,6 @@ img, object, video, embed {
 #nav-toggle {
 	display: none;
 }
-
 .header-nav-wrapper {
     background-color: rgba(255, 215, 0, 1);
     border-bottom: 1px solid #cecece;
@@ -110,7 +108,6 @@ img, object, video, embed {
     border-top: 1px solid #587272;
     border-bottom: 1px solid #587272;
 }
-
 
 /* section footer*/
 .footer {
@@ -228,7 +225,6 @@ img, object, video, embed {
 .button-submit-wrapper {
     justify-content: center;   
 }
-
 .reports-wrapper,
 .registration-platform-wrapper {
     display: flex;
@@ -242,7 +238,6 @@ img, object, video, embed {
     width: 1280px;
     max-width: 100%;
 }
-
 .reports-form-title,
 .registration-platform-title {
     padding: 10px 20px;
@@ -288,7 +283,6 @@ img, object, video, embed {
     border: 1px solid #cecece;
     border-radius: 5px;
 }
-
 .form-message {
     margin-top: 10px;
     font-family: Montserrat;
@@ -424,8 +418,6 @@ img, object, video, embed {
     padding: .625em;
     background-color: rgba(252, 227, 138, 0.8);
 }
-
-
 
 /* media request --------------------------------*/
 @media screen and (max-width: 1280px){
