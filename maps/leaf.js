@@ -72,13 +72,13 @@ map.addLayer( markerClusters );
 
 // ручное добавление маркера 
 var marker = L.marker([48.473734, 37.082929], {icon: myIconGreen} );
-marker.bindPopup('48.473734, 37.082929').openPopup();
+marker.bindPopup('<p>Статус: перевірено<br>координати: 48.473734, 37.082929</p>').openPopup();
 marker.addTo(map);
 
 var marker = L.marker([48.749060, 39.260875], {icon: myIconRed} );
-marker.bindPopup('48.749060, 39.260875').openPopup();
+marker.bindPopup('<p>Статус: потребують перевірки<br>координати: 48.749060, 39.260875</p>').openPopup();
 marker.addTo(map);
 
 var marker = L.marker([48.344774, 33.504967], {icon: myIconYellow} );
-marker.bindPopup('48.344774, 33.504967').openPopup();
+marker.bindPopup('<p>Статус: виконано заходи орнітологічної безпеки<br>координати: 48.344774, 33.504967</p>').openPopup();
 marker.addTo(map);
