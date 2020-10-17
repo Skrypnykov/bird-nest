@@ -108,6 +108,14 @@ img, object, video, embed {
     border-top: 1px solid #587272;
     border-bottom: 1px solid #587272;
 }
+.header-nav-login {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 5px;
+}
 
 /* section footer*/
 .footer {
@@ -599,6 +607,7 @@ img, object, video, embed {
         background-color: #456b6b;
     }
     
+/* report */
     .report-table-wrapper {
         padding: 5px;
     }
