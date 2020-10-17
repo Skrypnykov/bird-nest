@@ -9,10 +9,13 @@ var map = L.map( 'map', {
   zoomControl: false
 });
 
+// legent and control 
 new L.Control.Zoom({ 
   position: 'bottomright' 
 }).addTo(map);
 
+
+// marker
 
 L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -32,6 +35,7 @@ var myIcon = L.icon({
 var myIconRed = L.icon({
   iconUrl: myURL + 'images/red24.png',
   iconRetinaUrl: myURL + 'images/red48.png',
+
   iconSize: [15, 24],
   iconAnchor: [9, 21],
   popupAnchor: [0, -14]
@@ -72,7 +76,7 @@ map.addLayer( markerClusters );
 
 // ручное добавление маркера 
 var marker = L.marker([48.473734, 37.082929], {icon: myIconGreen} );
-marker.bindPopup('<p>Статус: перевірено<br>координати: 48.473734, 37.082929</p>').openPopup();
+marker.bindPopup('<p>Статус: виконано заходи орнітологічної безпеки<br>координати: 48.473734, 37.082929</p>').openPopup();
 marker.addTo(map);
 
 var marker = L.marker([48.749060, 39.260875], {icon: myIconRed} );
@@ -80,5 +84,5 @@ marker.bindPopup('<p>Статус: потребують перевірки<br>к
 marker.addTo(map);
 
 var marker = L.marker([48.344774, 33.504967], {icon: myIconYellow} );
-marker.bindPopup('<p>Статус: виконано заходи орнітологічної безпеки<br>координати: 48.344774, 33.504967</p>').openPopup();
+marker.bindPopup('<p>Статус: перевірено<br>координати: 48.344774, 33.504967</p>').openPopup();
 marker.addTo(map);
