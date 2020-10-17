@@ -129,7 +129,6 @@ img, object, video, embed {
     position: absolute;
     width: 100%;
     bottom: 10px;
-
 }
 .global-choice {
     background: rgba(248, 242, 248, 0.7);
@@ -139,6 +138,27 @@ img, object, video, embed {
     margin: 30px;
 }
 
+.map-legend-wrapper {
+    position: absolute;
+    bottom: 150px;
+    margin-left: 20px;
+}
+.map-legend {
+    background: rgba(248, 242, 248, .8);
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+}
+.map-legend-text {
+    font-family: Montserrat;
+    font-size: 8px;
+	font-weight: 500;
+    text-transform: uppercase;
+    color: #000;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5px;
+}
 
 /* section gallery */
 .gallery {
@@ -873,6 +893,10 @@ img, object, video, embed {
         font-size: 10px;
         padding: 10px;
     }
+    .map-legend-wrapper {
+        display: none;
+    }
+
     .gallery {
         height: 380px;
         padding: 0 20px;
