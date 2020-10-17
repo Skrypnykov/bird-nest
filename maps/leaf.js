@@ -14,7 +14,6 @@ new L.Control.Zoom({
   position: 'bottomright' 
 }).addTo(map);
 
-
 // marker
 
 L.tileLayer( 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -29,16 +28,15 @@ var myIcon = L.icon({
   iconRetinaUrl: myURL + 'images/pin48.png',
   iconSize: [29, 24],
   iconAnchor: [9, 21],
-  popupAnchor: [0, -14]
+  popupAnchor: [-2, -14]
 });
 
 var myIconRed = L.icon({
   iconUrl: myURL + 'images/red24.png',
   iconRetinaUrl: myURL + 'images/red48.png',
-
   iconSize: [15, 24],
   iconAnchor: [9, 21],
-  popupAnchor: [0, -14]
+  popupAnchor: [-2, -14]
 });
 
 var myIconGreen = L.icon({
@@ -46,7 +44,7 @@ var myIconGreen = L.icon({
   iconRetinaUrl: myURL + 'images/green48.png',
   iconSize: [15, 24],
   iconAnchor: [9, 21],
-  popupAnchor: [0, -14]
+  popupAnchor: [-2, -14]
 });
 
 var myIconYellow = L.icon({
@@ -54,21 +52,18 @@ var myIconYellow = L.icon({
   iconRetinaUrl: myURL + 'images/yellow48.png',
   iconSize: [15, 24],
   iconAnchor: [9, 21],
-  popupAnchor: [0, -14]
+  popupAnchor: [-2, -14]
 });
 
 // markerClusterGroup
 var markerClusters = L.markerClusterGroup();
 
 for ( var i = 0; i < markers.length; ++i ) {
-  var popup = markers[i].name +
-              '<br/>' + markers[i].city +
-              '<br/><b>IATA/FAA:</b> ' + markers[i].iata_faa +
-              '<br/><b>ICAO:</b> ' + markers[i].icao +
-              '<br/><b>Altitude:</b> ' + Math.round( markers[i].alt * 0.3048 ) + ' m' +
-              '<br/><b>Timezone:</b> ' + markers[i].tz;
+  var popup = '<br/><b>місто:</b> ' + markers[i].city +
+              '<br/><b>координати:</b> ' + markers[i].lat + '; '+ markers[i].lng +
+              '<br/><b>статус:</b> ' + markers[i].st;
 
-  var m = L.marker( [markers[i].lat, markers[i].lng], {icon: myIconGreen} )
+  var m = L.marker( [markers[i].lat, markers[i].lng], {icon: myIconYellow} )
                   .bindPopup( popup );
   markerClusters.addLayer( m );
 }
@@ -76,13 +71,13 @@ map.addLayer( markerClusters );
 
 // ручное добавление маркера 
 var marker = L.marker([48.473734, 37.082929], {icon: myIconGreen} );
-marker.bindPopup('<p>Статус: виконано заходи орнітологічної безпеки<br>координати: 48.473734, 37.082929</p>').openPopup();
+marker.bindPopup('<p><b>cтатус:</b> виконано заходи орнітологічної безпеки<br/><b>координати:</b> 48.473734, 37.082929</p>').openPopup();
 marker.addTo(map);
 
 var marker = L.marker([48.749060, 39.260875], {icon: myIconRed} );
-marker.bindPopup('<p>Статус: потребують перевірки<br>координати: 48.749060, 39.260875</p>').openPopup();
+marker.bindPopup('<p><b>cтатус:</b> потребують перевірки<br><b>координати:</b> 48.749060, 39.260875</p>').openPopup();
 marker.addTo(map);
 
 var marker = L.marker([48.344774, 33.504967], {icon: myIconYellow} );
-marker.bindPopup('<p>Статус: перевірено<br>координати: 48.344774, 33.504967</p>').openPopup();
+marker.bindPopup('<p><b>cтатус:</b> перевірено<br><b>координати:</b> 48.344774, 33.504967</p>').openPopup();
 marker.addTo(map);
