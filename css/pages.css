@@ -487,7 +487,6 @@ img, object, video, embed {
     .footer-nav-title,
     .footer-form-title {
         font-size: 18px;
-        margin-bottom: 12px;
     }
     .footer-content {
         font-size: 15px;
@@ -682,12 +681,11 @@ img, object, video, embed {
     .footer-sidebar-right {
         flex-direction: column;
         justify-content: center;
+        width: 100%;
     }
     .footer-form-title {
         text-align: center;
-    }
-    .footer-form, .footer-social {
-        width: 100%;
+        margin-left: 0;
     }
     .footer-social {
         margin-top: 40px;
