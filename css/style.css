@@ -703,11 +703,11 @@ img, object, video, embed {
 }
 @media screen and (max-width: 600px){
     .gallery-title::before {
-        width: 170px;
+        width: 180px;
         top: 60%;;
     }
     .gallery-title::after {
-        width: 170px;
+        width: 180px;
         top: 60%;;
     }
     .logo-partner-wrapper {
@@ -883,12 +883,16 @@ img, object, video, embed {
 }
 @media screen and (max-width: 400px){
     .gallery-title::before {
-        width: 90px;
+        width: 80px;
         top: 60%;;
     }
     .gallery-title::after {
-        width: 90px;
+        width: 80px;
         top: 60%;;
+    }
+    .global-telegram-wrapper {
+        right: 5px;
+        bottom: 50%;
     }
     .logo {
         display: none;
