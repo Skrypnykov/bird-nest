@@ -119,7 +119,7 @@ img, object, video, embed {
 	font-weight: 600;
     text-transform: uppercase;
     padding: 10px 5px;
-
+    display: none;
 }
 #map {
     height: 100vh;
