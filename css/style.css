@@ -892,7 +892,9 @@ img, object, video, embed {
     }
     .global-telegram-wrapper {
         right: 5px;
-        bottom: 45%;
+        -bottom: 45%;
+        -display: flex;
+        -align-items: center;
     }
     .logo {
         display: none;
