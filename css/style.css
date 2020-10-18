@@ -159,6 +159,20 @@ img, object, video, embed {
     position: relative;
     bottom: 5px;
 }
+.global-telegram-wrapper {
+    position: absolute;
+    right: 50px;
+    bottom: 35%;
+}
+.telegram-link {
+    display: inline-block;
+}
+.telegram-link:hover {
+    display: inline-block;
+    margin: 0 0.1rem;
+    animation: bounce;
+    animation-duration: 2s;
+}
 
 /* section gallery */
 .gallery {
@@ -689,11 +703,11 @@ img, object, video, embed {
 }
 @media screen and (max-width: 600px){
     .gallery-title::before {
-        width: 185px;
+        width: 170px;
         top: 60%;;
     }
     .gallery-title::after {
-        width: 185px;
+        width: 170px;
         top: 60%;;
     }
     .logo-partner-wrapper {
