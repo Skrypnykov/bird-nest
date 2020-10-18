@@ -167,12 +167,6 @@ img, object, video, embed {
 .telegram-link {
     display: inline-block;
 }
-.telegram-link:hover {
-    display: inline-block;
-    margin: 0 0.1rem;
-    animation: bounce;
-    animation-duration: 2s;
-}
 
 /* section gallery */
 .gallery {
