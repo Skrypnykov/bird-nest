@@ -643,12 +643,14 @@ img, object, video, embed {
     .footer-sidebar-right {
         flex-direction: row;
         width: 100%;
+        align-items: center;
     }
     .footer-form,
     .footer-social {
         width: 50%;
     }
     .footer-social {
+        margin-top: 0;
         justify-content: center;
         align-items: center;
     }
@@ -686,6 +688,10 @@ img, object, video, embed {
     }
     .footer-form, .footer-social {
         width: 100%;
+    }
+    .footer-social {
+        margin-top: 40px;
+        margin-left: 0;
     }
     .copyright {
         font-size: 10px;
