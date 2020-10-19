@@ -859,7 +859,6 @@ img, object, video, embed {
     .footer-social {
         width: 50%;
     }
-    
     .footer-social {
         margin-top: 0;
         justify-content: center;
@@ -946,6 +945,6 @@ img, object, video, embed {
         padding: 0 10px;
     }
     .form-input-title {
-        padding: 10px;
+        padding: 10px 10px 0;
     }
 }
