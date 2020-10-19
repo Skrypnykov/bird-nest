@@ -947,4 +947,7 @@ img, object, video, embed {
     .form-input-title {
         padding: 10px 10px 0;
     }
+    .form-input-submit {
+        margin: 10px 20px;
+    }
 }
