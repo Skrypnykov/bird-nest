@@ -85,10 +85,11 @@ img, object, video, embed {
 .header-nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 0;
 }
 .header-nav-list {
     display: flex;
+    justify-content: flex-start;
 }
 .header-nav-item {
     list-style: none;
