@@ -25,20 +25,29 @@ img, object, video, embed {
     width: 100%;
     background-image: linear-gradient(to top, rgba(252, 227, 138, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
 }
+.header-logo-wrapper {
+    display: flex;
+    align-items: center;
+}
 .logo-partner-wrapper {
-    padding: 5px 20px 0;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
 }
  .logo-partner {
-    max-width: 350px;
+    width: 35%;
 }
 .logo-wrapper {
     display: flex;
     align-items: center;
 }
 .logo {
-    margin: 0;
     align-items: flex-end;
+}
+.logo-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
 }
 .logo-title {
     font-family: Montserrat;
@@ -473,7 +482,7 @@ img, object, video, embed {
         margin-right: 4px;
     }
     .header-nav-link {
-        font-size: 12px;
+        font-size: 11px;
         padding: 10px;
     }
 
@@ -505,8 +514,7 @@ img, object, video, embed {
 }
 @media screen and (max-width: 600px){
     .logo-partner-wrapper {
-       padding: 20px 0 0;
-       text-align: center;
+        display: none;
     }
     .logo-partner {
         max-width: 300px;
