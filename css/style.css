@@ -32,12 +32,12 @@ img, object, video, embed {
     align-items: center;
 }
 .logo-partner-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 30px;
+    width: 100%;
+    padding: 10px 0 30px;
+    text-align: right;
 }
- .logo-partner {
-    width: 35%;
+.logo-partner {
+    width: 30%;
 }
 .logo-wrapper {
     display: flex;
@@ -49,7 +49,8 @@ img, object, video, embed {
 .logo-title-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0 20px;
+    align-items: center;
+    width: 100%;
 }
 .logo-title {
     font-family: Montserrat;
